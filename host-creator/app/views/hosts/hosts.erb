@@ -6,3 +6,16 @@
     <%= host.content %>
   </div>
 <% end %>
+<div class="content">
+      <p>Would you like to:</p>
+
+      <nav>
+        <% if logged_in? %>
+
+          <a href="/hosts/new"> Create New Host </a>
+          <a href="/logout"> Log Out </a>
+          
+        <%end %>
+
+      </nav>
+    </div>

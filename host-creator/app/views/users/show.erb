@@ -4,3 +4,20 @@
     <%= host.content %>
   </div>
 <% end %>
+<div class="content">
+      <p>Please signin or signup below:</p>
+
+      <nav>
+        <% if logged_in? %>
+
+          <a href="/hosts/new"> Create New Host </a>
+          <a href="/logout"> Log Out </a>
+          <p>Hello, <%=current_user.username %></p>
+
+        <% else %>
+          <a href="/signup">Sign Up</a>
+          <a href="/login"> Sign In </a>
+        <%end %>
+
+      </nav>
+    </div>
