@@ -1,8 +1,8 @@
 <p><%= @host.content %>
 
-<form method="post" action="/hostss/<%=@host.id%>/delete">
+<form method="post" action="/hosts/<%=@host.id%>/delete">
   <input id="hidden" type="hidden" name="_method" value="DELETE">
   <input type="submit" value="Delete Host">
 </form>
 
-<a href="/hosts/<%=@host.id%>/edit">Edit Host </a>
+<a href="/hosts/<%=@host.id%>/edit"> Edit Host </a>

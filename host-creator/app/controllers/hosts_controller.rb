@@ -22,8 +22,8 @@ class HostsController < ApplicationController
         redirect to "/hosts/new"
       else
         @host = current_user.hosts.build(content: params[:content])
-        if @tweet.save
-          redirect to "/hosts/#{@tweet.id}"
+        if @host.save
+          redirect to "/hosts/#{@host.id}"
         else
           redirect to "/hosts/new"
         end
