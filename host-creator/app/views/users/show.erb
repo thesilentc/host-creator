@@ -1,0 +1,6 @@
+<p> Here are your Hosts, <%= @user.username %>
+<% @user.hosts.each do |host| %>
+  <div>
+    <%= host.content %>
+  </div>
+<% end %>
