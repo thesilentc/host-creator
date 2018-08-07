@@ -1,6 +1,6 @@
 <h2>Host Creator</h2>
 
-Our file structure looks like this:
+The MVC file structure looks like this:
 
 ```bash
 -app
@@ -23,7 +23,7 @@ Our file structure looks like this:
       |- users
             |- create_user.erb
             |- login.erb
-            |- show.erb 
+            |- show.erb
 -config
 -db
 -spec
