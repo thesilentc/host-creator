@@ -5,12 +5,13 @@
   </div>
 <% end %>
 <div class="content">
-      <p>Please log in or sign up below:</p>
+      <p>Please choose from the links below:</p>
 
       <nav>
         <% if logged_in? %>
 
           <a href="/hosts/new"> Create New Host </a>
+          or
           <a href="/logout"> Log Out </a>
           <p>Hello, <%=current_user.username %></p>
 
