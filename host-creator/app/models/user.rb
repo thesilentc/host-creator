@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :hosts
 
-  has_secure_password # BCrypt gem 
+  has_secure_password #bcrypt
 
   def slug
     username.downcase.gsub(" ","-")
