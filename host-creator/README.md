@@ -31,7 +31,7 @@ The MVC file structure looks like this:
 ```
 Clone into the respo
 then:
-<code> cd host-creater/host-creater </code>
+<code> cd host-creator/host-creator </code>
 then
 <code> bundle install </code>
 and finally run by typing
