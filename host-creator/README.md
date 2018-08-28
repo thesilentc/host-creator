@@ -29,3 +29,10 @@ The MVC file structure looks like this:
 -spec
 ...
 ```
+Clone into the respo
+then:
+<code> cd host-creater/host-creater </code>
+then
+<code> bundle install </code>
+and finally run by typing
+<code> shotgun </code>
