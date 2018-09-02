@@ -1,0 +1,4 @@
+class EditHostsController < ApplicationController
+
+
+end
