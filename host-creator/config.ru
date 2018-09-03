@@ -7,4 +7,5 @@ end
 use Rack::MethodOverride
 use HostsController
 use UsersController
+use EditHostsController
 run ApplicationController
