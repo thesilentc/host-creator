@@ -9,7 +9,7 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "secret" #used by/with bcrypt gem
   end
 
-  get '/' do
+  get '/' do  #opens index page
     erb :index
   end
 
@@ -19,7 +19,7 @@ class ApplicationController < Sinatra::Base
       !!current_user
     end
 
-    def current_user
+    def current_user  # ':id' => url variable
       @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
     end
 

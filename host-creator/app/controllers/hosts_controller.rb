@@ -8,7 +8,7 @@ class HostsController < ApplicationController
     end
   end
 
-  get '/hosts/new' do
+  get '/hosts/new' do #=> should present a form for new hosts
     if logged_in?
       erb :'hosts/create_host'
     else
@@ -16,7 +16,7 @@ class HostsController < ApplicationController
     end
   end
 
-  post '/hosts' do
+  post '/hosts' do #=> CREATE, should add a new host
     if logged_in?
       if params[:content] == ""
         redirect to "/hosts/new"
@@ -77,7 +77,7 @@ class HostsController < ApplicationController
   end
 
 #verify and delete
-  delete '/hosts/:id/delete' do
+  delete '/hosts/:id/delete' do #=> DESTROY/delete a host 
     if logged_in?
       @host = Host.find_by_id(params[:id])
       if @host && @host.user == current_user
