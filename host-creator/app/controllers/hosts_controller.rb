@@ -55,7 +55,9 @@ class HostsController < ApplicationController
     end
   end
 
-  patch '/hosts/:id' do
+  put '/hosts/:id' do  #=> PATCH instead of PUT allows both full and partial
+                          #  updates to resources
+
     if logged_in?
       if params[:content] == ""
         redirect to "/hosts/#{params[:id]}/edit"
@@ -77,7 +79,7 @@ class HostsController < ApplicationController
   end
 
 #verify and delete
-  delete '/hosts/:id/delete' do #=> DESTROY/delete a host 
+  delete '/hosts/:id/delete' do #=> DESTROY/delete a host
     if logged_in?
       @host = Host.find_by_id(params[:id])
       if @host && @host.user == current_user
