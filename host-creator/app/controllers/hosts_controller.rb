@@ -87,7 +87,7 @@ class HostsController < ApplicationController
       end
       redirect to '/hosts'
     else
-      redirect to '/login'
+      redirect to '/'
     end
   end
 
