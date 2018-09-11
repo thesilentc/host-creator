@@ -29,15 +29,32 @@ class UsersController < ApplicationController
     end
   end
 
+#testing code from Su
   post '/login' do
-    user = User.find_by(:username => params[:username])
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect to "/hosts"
-    else
-      redirect to '/signup'
-    end
-  end
+        @user = User.find_by(:email => params[:email])
+          if User.exists?@user
+            if @user.authenticate(params[:password])
+              session[:user_id] = @user.id
+              redirect "/products"
+            else
+              # flash[:message] = "Incorrect Email OR Password"
+              redirect '/login'
+            end
+          else
+            flash[:message] = "This account does not exist. Please create a new account !"
+            redirect '/signup'
+          end
+      end
+
+  # post '/login' do
+  #   user = User.find_by(:username => params[:username])
+  #   if user && user.authenticate(params[:password])
+  #     session[:user_id] = user.id
+  #     redirect to "/hosts"
+  #   else
+  #     redirect to '/signup'
+  #   end
+  # end
 
   get '/logout' do
     if logged_in?
