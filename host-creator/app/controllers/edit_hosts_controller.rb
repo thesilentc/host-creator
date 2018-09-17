@@ -1,4 +1,0 @@
-class EditHostsController < ApplicationController
-
-
-end

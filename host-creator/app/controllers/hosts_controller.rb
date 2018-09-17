@@ -55,7 +55,7 @@ class HostsController < ApplicationController
     end
   end
 
-  put '/hosts/:id' do  #=> PATCH instead of PUT allows both full and partial
+  patch  '/hosts/:id' do  #=> PATCH instead of PUT allows both full and partial
                           #  updates to resources
 
     if logged_in?
