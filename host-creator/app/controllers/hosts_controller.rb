@@ -21,6 +21,7 @@ class HostsController < ApplicationController
       if params[:content] == ""
         redirect to "/hosts/new"
       else
+        @host = Host.create(:content => params["content"], :created_by => current_user.id)
         @host = current_user.hosts.build(content: params[:content])
         if @host.save
           redirect to "/hosts/#{@host.id}"
