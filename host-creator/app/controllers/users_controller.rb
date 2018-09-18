@@ -32,11 +32,11 @@ class UsersController < ApplicationController
 
 
   post '/login' do
-    user = User.find_by(:username => params[:username])
-    # @user = User.find_by(:username => params[:username])   @user is instance variable
+    # user = User.find_by(:username => params[:username])
+    @user = User.find_by(:username => params[:username])   #=> @user is instance variable
     if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      # session[:user_id] = @user.id                          @user.id is instance variable
+      # session[:user_id] = user.id
+      session[:user_id] = @user.id                        #  @user.id is instance variable
       redirect to "/hosts"
     else
       redirect to '/signup'
