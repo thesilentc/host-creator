@@ -17,18 +17,40 @@
     <div class="content">
       <p>Please Sign Up or log in below:</p>
 
+      <style>
+          .button {
+              background-color: #4CAF50;
+              border: none;
+              color: white;
+              padding: 15px 32px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              cursor: pointer;
+          }
+          </style>
+
       <nav>
         <% if logged_in? %>
 
-          <a href="/hosts/new"> Create New Host </a>
-          <a href="/logout"> Log Out </a>
+          <a href="/hosts/new" class="button"> Create New Host </a>
+          <a href="/logout"class="button"> Log Out </a>
           <p>Hello, <%=current_user.username %></p>
 
         <% else %>
-          <a href="/signup">Sign Up</a>
+          <a href="/signup"class="button">Sign Up</a>
           or
-          <a href="/login"> Log In </a>
+          <a href="/login"class="button"> Log In </a>
         <%end %>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-      </nav>
-    </div>
+        </div>
+      </div>
+        </head>
+      </html>
