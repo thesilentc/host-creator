@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :hosts
+  validates_associated :hosts 
 
   has_secure_password #bcrypt
 
