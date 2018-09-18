@@ -12,14 +12,15 @@
 <div class="container">
   <header><img src="images/fidelity1.png" class="img-responsive main-image"></header>
   <div class="col-md-8 col-md-offset-2">
+    <br><br>
     <h2>Fidelity: A Westworld Host Creator</h2>
 
-    <div class="content">
+    <div class="content"><br />
       <p>Please Sign Up or log in below:</p>
 
-      <style>
+      <!-- <style>
           .button {
-              background-color: #4CAF50;
+              background-color: #0099CC;
               border: none;
               color: white;
               padding: 15px 32px;
@@ -30,7 +31,7 @@
               margin: 4px 2px;
               cursor: pointer;
           }
-          </style>
+          </style> -->
 
       <nav>
         <% if logged_in? %>
@@ -40,9 +41,9 @@
           <p>Hello, <%=current_user.username %></p>
 
         <% else %>
-          <a href="/signup"class="button">Sign Up</a>
+          <a href="/signup"class="btn btn-primary">Sign Up</a>
           or
-          <a href="/login"class="button"> Log In </a>
+          <a href="/login"class="btn btn-primary"> Log In </a>
         <%end %>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
