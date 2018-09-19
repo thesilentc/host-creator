@@ -12,14 +12,14 @@
 <div class="container">
   <style>
   .button {
-      background-color: #4CAF50;
-      border: none;
+      background-color: #395EF6;
+      border-radius: 8px;
       color: white;
-      padding: 15px 32px;
+      padding: 10px 24px;
       text-align: center;
       text-decoration: none;
       display: inline-block;
-      font-size: 16px;
+      font-size: 15px;
       margin: 4px 2px;
       cursor: pointer;
   }
@@ -41,9 +41,9 @@
           <p>Hello, <%=current_user.username %></p>
 
         <% else %>
-          <a href="/signup"class="btn btn-primary">Sign Up</a>
+          <a href="/signup"class="button">Sign Up</a>
           or
-          <a href="/login"class="btn btn-primary"> Log In </a>
+          <a href="/login"class="button"> Log In </a>
         <%end %>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
