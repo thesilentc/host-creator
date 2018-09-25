@@ -3,6 +3,7 @@
 
 <% @hosts.each do |host| %>
   <div>
+    <!-- <% if @host.created_by == current_user.id %> -->
     <a href="/hosts/<%=host.id %>"><%= host.content %> </a>
   </div>
 <% end %>
