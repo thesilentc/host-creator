@@ -3,11 +3,14 @@
 
 <% @hosts.each do |host| %>
   <div>
-    <!-- a conditional to only show hyperlinks if the host owner (or whatever) is the current_user -->
-    <!-- <% if @host.created_by == current_user.id %> -->
+  <% if host.user.id == current_user.id %>
     <a href="/hosts/<%=host.id %>"><%= host.content %> </a>
+  <% else %>
+    <%= host.content %>
+  <%end %>
+ <!-- <%= host.content %> -->
   </div>
-<% end %>
+ <% end %>
 <div class="content">
       <p>Would you like to:</p>
 

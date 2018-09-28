@@ -1,11 +1,13 @@
 <p><%= @host.content %>
+  <% if @host.user.id == current_user.id %>
+    <form method="post" action="/hosts/<%=@host.id%>/delete">
+    <input id="hidden" type="hidden" name="_method" value="DELETE">
+    <input class="btn btn-primary" type="submit" value="Delete Host">
+    </form>
 
-<form method="post" action="/hosts/<%=@host.id%>/delete">
-  <input id="hidden" type="hidden" name="_method" value="DELETE">
-  <input class="btn btn-primary" type="submit" value="Delete Host">
-</form>
+    <a href="/hosts/<%=@host.id%>/edit"> Edit Host </a>
+  <%end%>
 
-<a href="/hosts/<%=@host.id%>/edit"> Edit Host </a>
 <nav>
   <a href="/logout"> Log Out </a>
 </nav>

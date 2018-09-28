@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
   has_many :hosts
-  validates :username, uniqueness: true
-  
-  validates_associated :hosts
+  # validates :username, uniqueness: true
+  #
+  # validates_associated :hosts
 
   has_secure_password #bcrypt
 

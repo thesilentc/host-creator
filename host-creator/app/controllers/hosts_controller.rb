@@ -8,16 +8,17 @@ class HostsController < ApplicationController
   #   end
   # end
 
-  get "/hosts" do
+  get '/hosts' do
     # if the user is signed in?
     if logged_in?
     # then find the curent user_id
     # @user = User.find(session[user_id])
     # render the hosts where user_id = current user
-    @hosts = Host.where(user_id: current_user)
+    # @hosts = Host.where(user_id: current_user)
+    @hosts = Host.all
     erb :'hosts/hosts'
   else
-    redirect "/logged_in"
+    redirect '/login'
     end
   end
 
