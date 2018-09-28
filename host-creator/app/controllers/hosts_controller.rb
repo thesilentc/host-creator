@@ -1,20 +1,10 @@
 class HostsController < ApplicationController
-  # get '/hosts' do
-  #   if logged_in?
-  #     @hosts = Host.all
-  #     erb :'hosts/hosts'
-  #   else
-  #     redirect to '/login'
-  #   end
-  # end
+
 
   get '/hosts' do
     # if the user is signed in?
     if logged_in?
-    # then find the curent user_id
-    # @user = User.find(session[user_id])
-    # render the hosts where user_id = current user
-    # @hosts = Host.where(user_id: current_user)
+    # render the hosts
     @hosts = Host.all
     erb :'hosts/hosts'
   else
@@ -36,7 +26,6 @@ class HostsController < ApplicationController
       if params[:content] == ""
         redirect to "/hosts/new"
       else
-        # @host = Host.create(:content => params["content"], :created_by => current_user.id)
         @host = current_user.hosts.build(content: params[:content])
         if @host.save
           redirect to "/hosts/#{@host.id}"
