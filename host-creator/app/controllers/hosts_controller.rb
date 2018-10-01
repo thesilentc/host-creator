@@ -28,9 +28,9 @@ class HostsController < ApplicationController
       else
         @host = current_user.hosts.build(content: params[:content])
         if @host.save #saves new host
-          redirect to "/hosts/#{@host.id}" # takes us to line 44 as next controller action
+          redirect to "/hosts/#{@host.id}" # redirects us to line 44 as next controller action
         else
-          redirect to "/hosts/new" # takes us to line 16 as new controller action
+          redirect to "/hosts/new" # redirects us to line 16 as new controller action
         end
       end
     else

@@ -39,8 +39,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id                        #  user is now logged in
       redirect to "/hosts"                            # redirect to another controller action (in hosts_controller)
     else
-      redirect to '/signup'
-    end
+      redirect to '/signup'                           # redirects us to line 5 as new controller action
   end
 
   get '/logout' do
