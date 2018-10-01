@@ -34,7 +34,7 @@ class HostsController < ApplicationController
         end
       end
     else
-      redirect to '/login'
+      redirect to '/login'  # redirects us to new controller action in users_controller
     end
   end
 
