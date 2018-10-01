@@ -17,7 +17,7 @@ class HostsController < ApplicationController
     if logged_in?
       erb :'hosts/create_host'
     else
-      redirect to '/login'
+      redirect to '/login'  # New controller action
     end
   end
 
@@ -27,10 +27,10 @@ class HostsController < ApplicationController
         redirect to "/hosts/new"
       else
         @host = current_user.hosts.build(content: params[:content])
-        if @host.save
-          redirect to "/hosts/#{@host.id}"
+        if @host.save #saves new host
+          redirect to "/hosts/#{@host.id}" # takes us to line 44 as next controller action
         else
-          redirect to "/hosts/new"
+          redirect to "/hosts/new" # takes us to line 16 as new controller action
         end
       end
     else
