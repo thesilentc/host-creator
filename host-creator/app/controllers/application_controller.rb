@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "secret" #used by/with bcrypt gem
+    set :session_secret, "secret" # creates an encrypted session_id unique to the user's session and stored in the browser as a cookie
   end
 
   get '/' do  #opens index page
@@ -17,7 +17,7 @@ class ApplicationController < Sinatra::Base
 
     def logged_in?
         !!current_user
-        
+
     end
 
       def current_user
