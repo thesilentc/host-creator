@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    if params[:username] == "" || params[:password] == ""
+    if params[:username] == "" || params[:password] == ""  # validation of filled form
       redirect to '/signup'
     else
       @user = User.new(:username => params[:username], :password => params[:password])
@@ -39,8 +39,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id                        #  user is now logged in
       redirect to "/hosts"                            # redirect to another controller action (in hosts_controller)
     else
-      redirect to '/signup'                           # redirects us to line 5 as new controller action
-  end
+      redirect to '/login'                           # redirects us to line 24 as new controller action
+    end
 
   get '/logout' do
     if logged_in?

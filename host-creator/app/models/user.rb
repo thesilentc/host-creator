@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_many :hosts
-  # validates :username, uniqueness: true
+  validates :username, uniqueness: true
   #
   # validates_associated :hosts
 
