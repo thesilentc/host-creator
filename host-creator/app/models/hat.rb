@@ -1,4 +1,4 @@
-class Host < ActiveRecord::Base
+class Hat < ActiveRecord::Base
   belongs_to :host
   validates :content, uniqueness: true
 
