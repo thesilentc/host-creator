@@ -6,12 +6,13 @@
     <% if host.user.id == current_user.id %>
       <a href="/hosts/<%=host.id %>"><%= host.content %> </a> Hat color: <%= host.hat_color %>
     <% else %>
-      <%= host.content %> Hat color: <%= host.hat_color %>
+      <%= host.content %> &nbsp;&nbsp;&nbsp;&nbsp; Hat color: <%= host.hat_color %>
     <%end %>
 
   </div>
  <% end %>
 <div class="content">
+  <br />
       <p>Would you like to:</p>
 
       <nav>
