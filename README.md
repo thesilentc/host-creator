@@ -1,6 +1,6 @@
 <h2>Host Creator</h2>
 
-<h3>You'll need to  `cd host-creator/host-creator` before running `shotgun` in your terminal
+You'll need to  `cd host-creator/host-creator` before running `shotgun` in your terminal
 
 The MVC file structure looks like this:
 
