@@ -13,10 +13,6 @@
 
 ActiveRecord::Schema.define(version: 3) do
 
-  create_table "hats", force: :cascade do |t|
-    t.text    "hat_color"
-    t.integer "host_id"
-  end
 
   create_table "hosts", force: :cascade do |t|
     t.text    "content"
