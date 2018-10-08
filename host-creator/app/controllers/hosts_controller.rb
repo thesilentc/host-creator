@@ -69,7 +69,7 @@ class HostsController < ApplicationController
       else
         @host = Host.find_by_id(params[:id])
         if @host && @host.user == current_user
-          if @host.update(content: params[:content])
+          if @host.update(content: params[:content], hat_color: params[:hat_color])
             redirect to "/hosts/#{@host.id}"
           else
             redirect to "/hosts/#{@host.id}/edit"

@@ -1,10 +1,9 @@
 <h2> Edit Host </h2>
-<nav>
-  <a href="/logout"> Log Out </a>
-</nav>
+
 
 <form method="post" action="/hosts/<%=@host.id%>">
   <input id="hidden" type="hidden" name="_method" value="PATCH">
-  <input type="text" name="content" value="<%= @host.content %>">
-  <input class="btn btn-primary" type="submit" value="submit">
+  <p>Name: <input type="text" name="content" value="<%= @host.content %>"></p>
+  <p>Hat Color: <input type="text" name="hat_color" value="<%= @host.hat_color %>"></p>
+  <input class="btn btn-primary" type="submit" value="Update Host"> or <a href="/logout"> Log Out </a>
 </form>
