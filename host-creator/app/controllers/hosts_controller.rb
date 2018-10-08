@@ -26,7 +26,7 @@ class HostsController < ApplicationController
       if params[:content] == ""
         redirect to "/hosts/new"
       else
-        @host = current_user.hosts.build(content: params[:content])
+        @host = current_user.hosts.build(content: params[:content], hats: params[:hats])
         if @host.save #saves new host
           redirect to "/hosts/#{@host.id}" # redirects us to line 44 as next controller action
         else

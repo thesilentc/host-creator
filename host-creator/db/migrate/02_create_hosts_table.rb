@@ -3,7 +3,7 @@ class CreateHostsTable < ActiveRecord::Migration
     create_table :hosts do |t|
       t.text :content
       t.integer :user_id
-      t.text :hat
+      t.string :hat
     end
   end
 end
