@@ -38,6 +38,7 @@ The MVC file structure looks like this:
       |- hosts_controller.rb
       |- users_controller.rb
   |- models
+      |- hat.rb
       |- hosts.rb
       |- user.rb
 
