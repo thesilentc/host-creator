@@ -1,18 +1,33 @@
 ## Host Creator
 
-Host Creator is a database project written using Sinatra ActiveRecord. It has the ability for users to sign-up, login, create robotic hosts, and even allows a user to decide the temperament of their hosts by assigning them either a White hat or a Black Hat. Users may view all the created hosts ever created, but may only update and otherwise destroy hosts of their own creation.
+Host Creator is a database project written using Sinatra and ActiveRecord. It has the ability for users to sign-up, login, and create robotic hosts. Users are allowed to decide the temperament of their hosts by assigning them either a White hat or a Black Hat. A user may view all the hosts created by all users. However, users may only update and otherwise destroy hosts of their own creation.
 
 ## Usage
 
-After cloning into the repository please access the app by changing into the directory by typing:
 
-  $ cd host-creator/host-creator
+After cloning into the repository please access the app by changing into the directory with:
+
+```cd host-creator/host-creator```
 
 Then run
+```bundle install```
 
-  $ bundle install
 
-And finally starting your server and then going to the appropriate port on the localhost
+Migrate the databases by running
+
+```db:migrate```
+
+
+To see the application in your browser, run
+
+```shotgun```
+
+
+and then go to the following address in your browser
+
+http://localhost:9393/
+
+
 
 The MVC file structure looks like this:
 
