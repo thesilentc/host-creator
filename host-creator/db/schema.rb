@@ -14,15 +14,15 @@
 ActiveRecord::Schema.define(version: 3) do
 
   create_table "hosts", force: :cascade do |t|
-    t.text     "content"
-    t.integer  "user_id"
-    t.text     "hat_color"
+    t.text    "content"
+    t.text    "hat_color"
+    t.integer "user_id"
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "username"
-    t.text     "email"
-    t.string   "password_digest"
+    t.string "username"
+    t.text   "email"
+    t.string "password_digest"
   end
 
 end
